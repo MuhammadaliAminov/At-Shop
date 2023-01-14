@@ -109,7 +109,10 @@ ul.list > li:last-child {
     top: 100%;
     visibility: visible;
     opacity: 1;
+    z-index: 1111;
 }
+
+
 
 .dropdown__content > li > a {
     padding: 10px;
@@ -171,10 +174,60 @@ ul.list > li:last-child {
     width: 100%;
 }
 
+.bottom__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__menu {
+    display: flex;
+    column-gap: 40px;
+}
+
+.main__menu > li > a {
+    padding: 6px 0;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: 200ms;
+}
+
+.main__menu > li > a:hover {
+    border-bottom: 2px solid var(--red);
+
+}
+
+.mega__dropdown:hover .mega__content {
+    visibility: inherit;
+    top: 100%;
+    opacity: 1;
+}
+
+.mega__dropdown a:hover i {
+    transform: rotate(180deg);
+}
+
+.mega__dropdown a i {
+    font-size: 12px;
+    margin-left: 5px;
+    transition: .3s;
+}
+
 .mega__content {
     background: var(--main-bg-color);
     box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.25);
     padding: 45px 40px;
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    opacity: 0;
+    transition: .5s;
+    top: calc(100% + 100px);
 }
 
 .mega__content ul {
@@ -184,6 +237,14 @@ ul.list > li:last-child {
 
 .mega__content ul > li > a {
     padding: 10px 0;
-    border-bottom: 1px dashed rgba(68, 68, 68, 0.542);
     width: max-content;
+    transition: .2s ease-in-out;
+    border-bottom: 2px dashed #E9E9E9;
 }
+
+.mega__content ul > li > a:hover {
+    color: var(--red);
+    margin-left: 10px;
+    border-bottom: 2px dashed var(--red);
+
+} 
