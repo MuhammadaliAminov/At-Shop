@@ -62,11 +62,13 @@ li {
     font-weight: 700;   
     transition: .3s;
     text-align: center;
+    
 }
 
 .all-btn:hover {
     background: var(--white);
     color: var(--black);
+    border: 2px solid var(--black);
 }
 
 .title {
@@ -678,7 +680,10 @@ ul.list > li:last-child {
 
 .soclis__form {
     background: #fff;
-    
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 6px;
 }
 
 .soclis__form input {
@@ -692,6 +697,8 @@ ul.list > li:last-child {
     background: #BF3D3F;
     padding: 13px 15px;
     margin: 7px 0 7px 5px;
+    color: var(--white);
+    cursor: pointer;
 }
 
 .soclis__form input[placeholder] {
@@ -702,4 +709,8 @@ ul.list > li:last-child {
     font-size: 32px;
     font-weight: 600;
     margin-bottom: 43px;
+}
+
+.socalis__btn:hover {
+    background: #8f2628;
 }
